@@ -38,6 +38,9 @@ void-- empty-- koi data nahi hai--- khali(empty value)
 
 smallest addressable unit memory is 1byte.
 
+----- Loops ------
+
+
 
 
 
