@@ -42,6 +42,9 @@ smallest addressable unit memory is 1byte.
 
 
 
+#day 4
+
+Pattern 
 
 
 
