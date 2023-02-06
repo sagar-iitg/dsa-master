@@ -1,3 +1,6 @@
+package switchs;
+
+
 public class Switch {
 
 

@@ -1,3 +1,5 @@
+package switchs;
+
 public class SwitchString {
 
     public static void main(String[] args) {
