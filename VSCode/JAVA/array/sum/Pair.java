@@ -1,5 +1,5 @@
-package array;
-import java.util.ArrayList;
+package array.sum;
+
 
 public class Pair {
 
