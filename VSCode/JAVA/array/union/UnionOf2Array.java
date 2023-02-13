@@ -2,22 +2,23 @@ package array.union;
 
 import java.util.ArrayList;
 
-public class UnionOf2Array {
+public class UnionOf2Array implements Union{
 
 
-    public static void main(String[] args) {
+    // public static void main(String[] args) {
         
-        int[] arr1={10,5,4,3,2,2};
-        int[] arr2={1,9,10,2,-1};
+    //     int[] arr1={10,5,4,3,2,2};
+    //     int[] arr2={1,9,10,2,-1};
 
-        ArrayList<Integer> res=new ArrayList<>();
-        res=union( arr1, arr2);
-        System.out.println(res);
+    //     ArrayList<Integer> res=new ArrayList<>();
+    //     res=union( arr1, arr2);
+    //     System.out.println(res);
 
 
-    }
+    // }
 
-    public static  ArrayList<Integer> union(int[] arr1,int[] arr2)
+    @Override
+    public   ArrayList<Integer> union(int[] arr1,int[] arr2)
     {
 
         ArrayList<Integer> ans=new ArrayList<>();
