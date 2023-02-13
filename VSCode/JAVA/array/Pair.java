@@ -5,16 +5,22 @@ public class Pair {
 
 
     public static void main(String[] args) {
-        
-        ArrayList<Integer> arr=new ArrayList<>();
-        arr.add(0, 1);
-        arr.add(25);
-
-        arr.forEach(System.out::println);
-
-        
+    
+        int arr[]={10,20,40,60,70};
 
 
+        int target=30;
+
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=i+1;j<arr.length;j++)
+            {
+                if(arr[i]+arr[j]==target)
+                {
+                        System.out.println(arr[i]+" "+arr[j]);
+                }
+            }
+        }
 
     }
 

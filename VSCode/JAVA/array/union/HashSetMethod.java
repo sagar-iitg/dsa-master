@@ -5,17 +5,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class HashSetMethod implements Union {
-
-
-   
-
-    
+      
     @Override
     public ArrayList<Integer> union(int[] arr1,int[] arr2) {
-        
-
-       
-
 
         Set<Integer> s=new HashSet<>();
 
