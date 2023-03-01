@@ -35,6 +35,7 @@ public class Leet75Code1 {
         countTwoPresentInArray=lengthOfArray-( countZerosPresentInArray+countOnePresentInArray);
       
         
+        
         System.out.println(countZerosPresentInArray);
         System.out.println(countOnePresentInArray);
         System.out.println(countTwoPresentInArray);
