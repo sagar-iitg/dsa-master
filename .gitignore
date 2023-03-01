@@ -2,5 +2,9 @@
 .class/
 /.class/
 /.class
-
+script.sh
+script.bat
 *.class
+
+/vscode/script.sh
+/vscode/script.bat
