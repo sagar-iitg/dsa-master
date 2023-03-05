@@ -19,8 +19,8 @@ class ReverseString{
             int j=n-1;
             while(i<=j)
             {
-                char temp=str.charAt(i);
-                str.charAt(j)=str.charAt(i);
+                //char temp=str.charAt(i);
+               // str.charAt(j)=str.charAt(i);
 
 
                 i++;

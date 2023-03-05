@@ -4,9 +4,9 @@ public class CharacterAndArray {
 
 
     public static void main(String[] args) {
-        char ch[]={'a','b'};
+        //char ch[]={'a','b'};
         String str=" ";
-        str.valueOf(ch);
+        //str.valueOf(ch);
         System.out.println(str);
 
     }
