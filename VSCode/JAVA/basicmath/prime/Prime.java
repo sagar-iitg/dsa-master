@@ -7,15 +7,23 @@ public class Prime{
         
 
 
-        for(int i=0;i<=1000;i++)
+        int count=0;
+        int x=499979;
+
+        for(int i=0;i<x;i++)
         {
 
             int res=printPrimeNumber(i);
             //System.out.println(res);
             if(res!=-1)
+            {
                 System.out.print(res+" ");
+                count++;
+            }
+               
 
         }
+        System.out.println("Count---------" + count);
            
             
        
