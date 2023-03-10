@@ -13,11 +13,11 @@ public class Even {
     private static boolean even(int x)
     {
 
-        if((x&1)!=1)
+        if((x&1)==1)
         {
-            return true;
+            return false;
         }
-        return false;
+        return true;
 
 
        
