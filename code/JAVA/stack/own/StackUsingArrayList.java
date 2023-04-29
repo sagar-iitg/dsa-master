@@ -53,8 +53,10 @@ public class StackUsingArrayList {
 
     @Override
     public String toString() {
-        return  ""+stack ;
+        return  ""+stack.toString() ;
     }
+
+    
 
     
     

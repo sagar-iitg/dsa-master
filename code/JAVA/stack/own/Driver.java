@@ -4,21 +4,27 @@ public class Driver {
 
     public static void main(String[] args) {
         
-        StackUsingArrayList st=new StackUsingArrayList();
-        System.out.println(st);
-        System.out.println(st.peek());
+        //StackUsingArrayList st=new StackUsingArrayList();
+        StackUsingArray st=new StackUsingArray(2);
+       
+
+
         System.out.println(st.isEmpty());
-        System.out.println(st.pop());
-        st.push(1);
         st.push(2);
-        st.push(3);
-        System.out.println(st);
-        System.out.println(st.peek());
-        System.out.println(st.isEmpty());
-        System.out.println(st.pop());
-        System.out.println(st.peek());
-        System.out.println(st);
+        st.push(1);
         System.out.println(st.size());
+         st.push(3);
+         System.out.println(st.size());
+         System.out.println(st.peek());
+         st.push(10);
+         System.out.println(st.size());
+         System.out.println(st.peek());
+        // st.push(4);
+        // System.out.println(st.isEmpty());
+
+        // System.out.println(st.size());
+        // System.out.println(st.peek());
+        // System.out.println(st.pop());
 
     }
     
