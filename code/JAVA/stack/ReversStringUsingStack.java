@@ -1,6 +1,6 @@
 package code.java.stack;
+import java.util.*;
 
-import java.util.Stack;
 
 public class ReversStringUsingStack {
 
@@ -14,7 +14,9 @@ public class ReversStringUsingStack {
 
     private static String solve(String str)
     {
-        Stack<Character> stack=new Stack<>();
+       // Stack<Character> stack=new Stack<>();
+        
+        Deque<Character> stack=new ArrayDeque<>();
         int idx=0;
 
         while(idx<str.length())
