@@ -1,4 +1,4 @@
-package code.java.stack;
+package stack;
 import java.util.*;
 
 

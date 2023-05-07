@@ -54,6 +54,7 @@ public class Main {
           } 
   
       printBoard(board);
+        scanner.close();
     }
   
   
