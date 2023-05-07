@@ -28,10 +28,10 @@ public class ReversStringUsingStack {
        while(!stack.isEmpty())
        {
             char ch=stack.pop();
-            res=res.append(ch);
+            res.append(ch);
 
        }
-       System.out.println(res);
+       //System.out.println(res);
         return res.toString();
 
 
