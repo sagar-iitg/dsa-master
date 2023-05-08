@@ -9,7 +9,7 @@ public class PushBottomAtStack {
 
         if(s.isEmpty())
         {
-            s.push(4);
+            s.push(data);
             return;
         }
 
@@ -29,7 +29,7 @@ public class PushBottomAtStack {
          stack.push(2);
          stack.push(3);
 
-         pushAtBottom(stack,4);
+         pushAtBottom(stack,40);
 
 
          while(!stack.isEmpty())
