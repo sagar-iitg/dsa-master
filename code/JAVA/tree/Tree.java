@@ -1,4 +1,5 @@
 package tree;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -74,17 +75,26 @@ public class Tree {
        
         Queue<Node> q=new LinkedList<Node>();
         q.add(root);
+       // q.add(null);
 
         while(!q.isEmpty())
         {
+
+           
             Node temp=q.peek();
+           
             q.remove();
             System.out.print(temp.data+" ");
-
-            if(temp.left!=null)
+            
+        
+                if(temp.left!=null)
                 q.add(temp.left);
-            if(temp.right!=null)
+                if(temp.right!=null)
                 q.add(temp.right);
+          
+
+         
+        
 
             
 
@@ -188,18 +198,221 @@ public class Tree {
 
     }
    
-   
+    static void printBottomView(Node root) 
+    {
+
+
+        
+        if(root==null)
+        {
+            return;
+        }
+
+        Map<Integer,Integer> topNode=new HashMap<>();
+        Queue<Pair<Node,Integer>> queue=new LinkedList<>();
+        Pair<Node,Integer> p=new Pair<>(root,0);
+
+
+        queue.add(p);
+
+
+        while(!queue.isEmpty())
+        {
+            Pair<Node,Integer> temp=queue.peek();
+            queue.remove();
+            Node frontNode=temp.first;
+            int hd=temp.second;
+
+           
+                    topNode.put(hd,frontNode.data);
+
+          
+
+            if(frontNode.left!=null)
+            {
+                queue.add(new Pair<Node,Integer>(frontNode.left, hd-1));
+
+
+            }
+            if(frontNode.right!=null)
+            {
+                queue.add(new Pair<Node,Integer>(frontNode.right, hd+1));
+                
+
+            }
+
+
+        }
+
+          for(Map.Entry<Integer,Integer> i:topNode.entrySet())
+          {
+            System.out.print(i.getValue()+" ");
+          }
+          System.out.println(topNode);
+          System.out.println();
+
+
+
+
+
+
+    }
+    
+    
+    static void printLeftView(Node root,ArrayList<Integer> ans,int level){
+        
+
+        //base case
+
+        if(root==null)
+            return;
+
+        if(level==ans.size())
+        {
+            ans.add(root.data);
+        }
+        printLeftView(root.left, ans, level+1);
+        printLeftView(root.right, ans, level+1);
+    }
+
+
+    static void printRightView(Node root,ArrayList<Integer> ans,int level){
+        
+
+        //base case
+
+        if(root==null)
+            return;
+
+        if(level==ans.size())
+        {
+            ans.add(root.data);
+        }
+        printRightView(root.right, ans, level+1);
+        printRightView(root.left, ans, level+1);
+    }
+
+    static void boundary(Node root)
+    {
+        if(root==null)
+            return;
+        
+
+        System.out.println(root.data);
+
+        //A
+        printLeftNodes(root.left);
+        //B
+        printLeafNodes(root);
+        printRightNodes(root.right);
+
+
+    }
+    
+    static void printLeafNodes(Node root)
+    {
+
+        if(root==null)
+            return;
+        if(root.left==null && root.right==null)
+            {
+                System.out.println(root.data);
+            }
+              printLeafNodes(root.left);
+
+          
+                printLeafNodes(root.right);
+         
+            
+
+
+        
+        
+    }
+
+    static void printRightNodes(Node root) {
+
+        if(root==null){
+            return;
+        }
+
+        if(root.left==null && root.right==null)
+            return;
+        
+        
+        if(root.right!=null)
+        {
+            printRightNodes(root.right);
+
+        }
+       
+        else{
+            printRightNodes(root.left);
+        }
+       
+
+        System.out.println(root.data);
+        
+
+
+        
+        
+}
+    static void printLeftNodes(Node root) {
+
+            if(root==null){
+                return;
+            }
+
+            if(root.left==null && root.right==null)
+                return;
+
+            
+            System.out.println(root.data);
+                if(root.left!=null)
+                {
+                printLeftNodes(root.left);
+                }
+            else{
+                printLeftNodes(root.right);
+            }
+
+
+            
+            
+    }
+
     public static void main(String[] args) {
        
          //preorder sequence
 
          //array 
          //int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
-         int nodes[]={10,20,30,-1,-1,40,60,-1,-1,-1,80,50,-1,70,-1,-1,90,-1,-1};
+         //int nodes[]={10,20,30,-1,-1,40,60,-1,-1,-1,80,50,-1,70,-1,-1,90,-1,-1};
+        
+
+         //int nodes[]={10,20,30,-1,-1,40,60,-1,-1,-1,80,50,-1,70,-1,-1,90,-1,-1};
+        int nodes[]={10,20,30,-1,-1,50,70,90,-1,-1,80,-1,-1,60,-1,-1,40,-1,100,-1,120,110,-1,-1,130,-1,-1};
+
 
          //building tree using buildTree
          Node root=buildTree(nodes);
-         levelOrder(root);
+         boundary(root);
+
+         
+            // ArrayList<Integer> ans=new ArrayList<>();
+            // printLeftView(root,ans,0);
+            // System.out.println(ans);
+
+
+            // ArrayList<Integer> ans=new ArrayList<>();
+            // printRightView(root,ans,0);
+            // System.out.println(ans);
+
+
+           // printBottomView(root);
+         
+         //levelOrder(root);
 
 
 
