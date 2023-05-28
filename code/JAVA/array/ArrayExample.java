@@ -1,6 +1,6 @@
 package array;
 
-
+import java.util.ArrayList;
 
 class ArrayExample{
 
@@ -16,6 +16,8 @@ class ArrayExample{
         System.out.println(bool[49]);
 
         System.out.println(arr.length);
+        ArrayList<Integer> xyz=new ArrayList<>();
+        System.out.println(xyz.size());
         
     }
 }
