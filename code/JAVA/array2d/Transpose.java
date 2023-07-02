@@ -1,7 +1,5 @@
 package array2d;
 
-
-
 public class Transpose {
 
 
