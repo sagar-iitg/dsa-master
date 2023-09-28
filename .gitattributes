@@ -1,0 +1,6 @@
+# Auto-detect text files and normalize line endings to CRLF (Windows-style)
+* text=auto
+
+# Specify line endings for specific file types (if needed)
+# *.txt text eol=crlf
+# *.html text eol=crlf
